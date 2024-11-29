@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #87ceeb; /* Sky blue */
+}
+
+/* Game Container */
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+/* Basket (Player-Controlled Element) */
+#basket {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+    background-color: #8b0000; /* Dark red */
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Fruits */
+.fruit {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red; /* Default fruit color */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Bad Fruit */
+.bad-fruit {
+    background-color: black; /* Highlight the bad fruit visually */
+}
+
+/* Stars (Bonus Item) */
+.star {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: gold;
+    border-radius: 50%;
+    box-shadow: 0px 2px 8px rgba(255, 215, 0, 0.8);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Score Display */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Game Over Screen */
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 40px;
+    border-radius: 10px;
+    display: none; /* Initially hidden */
+    text-align: center;
+}
+
+/* Start/Restart Button */
+#start-button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #8b0000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+#start-button:hover {
+    background-color: #a00000; /* Slightly lighter red */
+}
